@@ -1,7 +1,7 @@
 .sidebar-container {
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
-	box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.068);
+    background: var(--glass-white-bg);
 	padding: 30px;
 	border-radius: 15px;
 	color: var(--font-white);

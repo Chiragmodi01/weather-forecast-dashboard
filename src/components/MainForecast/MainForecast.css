@@ -8,7 +8,7 @@
 	border-radius: 20px;
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
-	box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.068);
+    background: var(--glass-white-bg);
 }
 
 .forecast-wrapper {
@@ -128,6 +128,23 @@
 }
 
 @media (max-width: 900px) {
+    .main-header {
+        margin-bottom: 0;
+    }
+
+    .main-forecast {
+        margin: 10px 0;
+    }
+
+    .main-forecast .weather-desc .main-title {
+        display: none;
+    }
+    
+    .main-forecast .weather-desc .desc-title {
+        word-spacing: normal;
+    }
+    
+
 	.status-border-bottom {
 		display: none;
 	}

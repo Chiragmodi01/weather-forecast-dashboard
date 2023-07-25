@@ -4,6 +4,7 @@
 	--error-color: rgb(253, 55, 55);
 	--font-white: #ffffffdb;
 	--border-white: #ffffffc9;
+  --glass-white-bg: rgba(255, 255, 255, 0.068);
 }
 body {
 	margin: 0;
