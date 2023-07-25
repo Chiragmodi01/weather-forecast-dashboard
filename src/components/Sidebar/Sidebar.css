@@ -1,0 +1,212 @@
+.sidebar-container {
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.068);
+	padding: 30px;
+	border-radius: 15px;
+	color: var(--font-white);
+	max-width: 220px;
+	min-width: 220px;
+	display: flex;
+	flex-direction: column;
+}
+
+.loader-wrapper {
+	margin: auto;
+}
+
+#input-error {
+	color: var(--error-color);
+	animation: shake 330ms;
+	-webkit-animation: shake 330ms;
+	-moz-animation: shake 330ms;
+	-o-animation: shake 330ms;
+}
+
+#input-error .input-search-city {
+	color: var(--error-color);
+	border-color: var(--error-color);
+}
+
+#input-error .btn-search {
+	color: var(--error-color);
+}
+
+@keyframes shake {
+	20% {
+		transform: translateX(3px);
+	}
+	40% {
+		transform: translateX(-6px);
+	}
+	60% {
+		transform: translateX(4px);
+	}
+	80% {
+		transform: translateX(-4px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.search-city-input-wrapper {
+	margin-bottom: 40px;
+	font-size: 15px;
+	max-width: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.search-city-input-wrapper .thermo-icon {
+	position: absolute;
+	top: -8px;
+	padding: 0;
+	left: -5px;
+}
+
+.search-city-input-wrapper .btn-search {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: var(--font-white);
+	padding: 0;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	cursor: pointer;
+}
+
+.search-city-input-wrapper .input-search-city {
+	width: calc(100% - 24px);
+	padding: 0 0 2px 24px;
+	border: none;
+	outline: none;
+	height: 20px;
+	background-color: transparent;
+	color: var(--font-white);
+	border-bottom: 1.2px solid var(--border-white);
+}
+
+.search-city-input-wrapper .input-search-city::placeholder {
+	color: #ffffff99;
+}
+
+.sunset-details {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	border-radius: 10px;
+	border: 1.5px solid #ffffff3c;
+	padding: 5px 10px;
+}
+
+.sunset-details .sunset-detail {
+	font-size: 13px;
+	margin-bottom: 2px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.temp-details-wrapper {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	flex: 1;
+	align-items: space-between;
+	justify-content: space-between;
+}
+
+.temp-details-wrapper .main-temp-details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 40px;
+}
+
+.temp-details-wrapper .main-temp-details .btn-toggle-metric {
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	padding: 0;
+	color: var(--font-white);
+	background-color: transparent;
+}
+
+.temp-details-wrapper .main-temp-details .btn-toggle-metric .toggle-icon {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+}
+
+.temp-details-wrapper .main-temp-details .widget-icon .widget-icon-img {
+	display: block;
+	filter: drop-shadow(2px 2px 7px #0000017a);
+}
+
+.temp-details-wrapper .main-temp-details .temp-text {
+	height: 100%;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px;
+}
+
+.temp-details-wrapper .weather-report-details .city-name {
+	font-size: 17px;
+	margin: 6px 0;
+}
+
+.temp-details-wrapper .weather-report-details .weather-report-desc {
+	font-size: 12px;
+	margin: 0;
+	font-weight: 300;
+}
+
+.temp-details-wrapper .extra-temp-details {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	font-size: 12px;
+}
+
+.temp-details-wrapper .extra-temp-details .detail {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1px;
+}
+
+@media (max-width: 710px) {
+	.sidebar-container {
+		width: auto;
+		max-width: none;
+		min-width: auto;
+		padding: 25px 30px 0 30px;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.sidebar-container .extra-temp-details {
+		display: none;
+	}
+
+	.sidebar-container .temp-details-wrapper .main-temp-details {
+		font-size: 30px;
+	}
+
+	.search-city-input-wrapper {
+		margin-bottom: 20px;
+	}
+
+	.sunset-details,
+	.weather-report-details {
+		display: none;
+	}
+}
